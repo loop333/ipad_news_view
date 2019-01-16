@@ -35,7 +35,7 @@ function play_video(slug) {
     }, true);
 
     setInterval(() => {
-      if (!playing) {
+      if (!playing && !video.paused) {
         get_video_url(slug).then(url => {
           console.log('set new src');
           video.src = url;
