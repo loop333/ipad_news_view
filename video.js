@@ -34,6 +34,7 @@ function play_video(slug) {
       playing = true;
     }, true);
 
+// set new source on http 410 gone
     setInterval(() => {
       if (!playing && !video.paused) {
         get_video_url(slug).then(url => {
